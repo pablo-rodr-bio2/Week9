@@ -1,22 +1,21 @@
 import { CreatePizza, Baking  } from "./Types/CreatePizza"
-import { Pizza } from "./Types/Pizza"
-import { PizzaOps, criterion, direction } from "./Types/PizzaOps"
+import { Pizza, printPizza } from "./Types/Pizza"
+import { PizzaOps, Criterion, Direction } from "./Types/PizzaOps"
 import { menu } from "./dataset"
 import { getRandomInt } from "./util"
-
 
 const addPizza = (pizza: CreatePizza) => {
     const id = getRandomInt(10000).toString()
     const date = Date.now()
     const newPizza: Pizza = {id: id, date: date, ...pizza}
     menu.push(newPizza)
-    return newPizza
+    return newPizza 
 }
 
-const getPizza = (id: string) => {
-    let result = menu.find(pizza => pizza.id === id)
-    return result as Pizza
-}
+// const getPizza = (id: string) => {
+//     let result = menu.find(pizza => pizza.id === id)
+//     return result as Pizza
+// }
 
 const getHotPizzas = () => {
     const result = menu.filter(pizza => {
@@ -25,10 +24,10 @@ const getHotPizzas = () => {
     return result
 }
 
-const sortPizzas = (criterion: criterion, direction?: direction) => {
+const sortPizzas = (criterion: Criterion, direction: Direction = "asc") => {
     
     return menu.sort((pizzaA, pizzaB) => {
-            if(direction === "asc" || direction === undefined) {
+            if(direction === "asc" ) {
                 return pizzaA[criterion].toString().localeCompare(pizzaB[criterion].toString())
             } else {
                 return pizzaB[criterion].toString().localeCompare(pizzaA[criterion].toString())
@@ -38,22 +37,13 @@ const sortPizzas = (criterion: criterion, direction?: direction) => {
 }
 
 const getMenu = () => {
-    menu.forEach(pizza => console.log(` Pizza information:
-        Id: ${pizza.id} 
-        Date: ${new Date(pizza.date * 1000)}
-        Name: ${pizza.Name}
-        Size: ${pizza.Size}
-        Crust: ${pizza.Crust}
-        Toppings: ${pizza.Toppings}
-        Baking: ${pizza.Baking}
-        Price: € ${pizza.Price}
-        ` ))
+    menu.forEach(pizza => printPizza(pizza))
     return menu
 }
 
 const newPizzaOps: PizzaOps = {
     addPizza: addPizza,
-    getPizza: getPizza,
+    getPizza: (id) => { return menu.find(pizza => pizza.id === id) as Pizza },
     getHotPizzas: getHotPizzas,
     sortPizzas: sortPizzas,
     getMenu: getMenu
@@ -71,10 +61,13 @@ const newPizza: CreatePizza = {
     Baking: Baking.Fast,
     Price: 50
 }
-
-console.log(newPizzaOps.addPizza(newPizza))
-console.log(getMenu())
+// console.log('Create a new Pizza')
+// const newPizzaCreated = newPizzaOps.addPizza(newPizza)
+// printPizza(newPizzaCreated)
+// console.log(getMenu())
 // console.log(newPizzaOps.getPizza("1"))
 // console.log(newPizzaOps.getHotPizzas())
-// console.log(newPizzaOps.sortPizzas("Baking", "desc"))
+// console.table(newPizzaOps.sortPizzas("Baking"))
 // console.log(getMenu())
+
+console.log(newPizzaOps.getPizza("a"))

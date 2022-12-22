@@ -1,7 +1,7 @@
-console.log('Hello-world')
-
 type Size = "S" | "M" | "L"
+
 type Crust = "Thin" | "Thick"
+
 enum Baking {
     Fast = 10,
     Medium = 20,
