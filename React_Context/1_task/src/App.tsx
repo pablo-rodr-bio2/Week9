@@ -1,22 +1,18 @@
-import React, { useState } from 'react';
-import Comment, { CommentType } from './components/Comment';
+import Comment from './components/Comment';
 import SubmitComment from './components/SubmitComment';
-import { firstComments } from './db/comments'
-import { MyCommentContent } from './components/CommentsProvider';
+import { CommentsProvider } from './context/CommentsContext';
 import "./styles.css";
 
 
 function App() {
 
-  const [comments, setComments] = useState<CommentType[]>(firstComments)
-
   return (
-    <MyCommentContent.Provider value={{ comments, setComments }} >
+    <CommentsProvider>
       <div className='App'>
         <Comment />
         <SubmitComment />
       </div>
-    </MyCommentContent.Provider>
+      </CommentsProvider>
   );
 }
 

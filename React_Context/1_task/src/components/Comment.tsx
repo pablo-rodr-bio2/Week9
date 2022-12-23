@@ -1,32 +1,32 @@
 import React from 'react'
-import { useComments } from './CommentsProvider'
+import { useComments } from '../context/CommentsContext'
 
 export type CommentType = {
+    id: string,
     author: string,
-    comment: string | undefined
+    comment: string,
+    votes: number
 }
 
 const Comment = () => {
 
-    const { comments } = useComments()
+    const {comments} = useComments()
+    console.log(comments)
 
+    if(!comments) return (<div>Looking for comments</div>)
     return (
         <>
-            {
-                comments.map(comment => {
-                    return (
-                        <>
-                            <div>{comment.author}</div>
-                            <div>{comment.comment}</div>
-                            <br/>
-                        </>
-                        
-                    )
-                })
-            }
-
+        {
+            comments.map(comment => 
+                <div id={comment.id}>
+                    <div>{comment.author}</div>
+                    <div>{comment.comment}</div>
+                    <div>{comment.votes}</div>
+                </div>
+                
+            )
+        }
         </>
-
     )
 }
 
