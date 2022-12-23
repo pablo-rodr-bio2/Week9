@@ -1,0 +1,10 @@
+.App {
+    box-sizing: border-box;
+    background-color: blanchedalmond;
+    width: 60rem;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 30px;
+    gap: 5px;
+}

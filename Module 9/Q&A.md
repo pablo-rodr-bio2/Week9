@@ -7,3 +7,6 @@
 
 Interface to use for components you know will e extended
 Type for things you know wont touch to much in the future
+
+Charla con David
+Aislar problemas 

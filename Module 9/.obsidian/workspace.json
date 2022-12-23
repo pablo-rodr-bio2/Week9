@@ -20,108 +20,12 @@
             }
           },
           {
-            "id": "12648d596e8bae64",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Typescript/Intersection Types.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "1bb2dd888bb51d67",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Typescript/1. type inference and explicit types.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "f63db229b7be4be6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "Typescript/2. Structural Typing.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "1492aba31955a80c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Typescript/3. Static Type Checking.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "e765e8bb75841719",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Typescript/4. any unknown never.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "eca56b1090ab39fa",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Typescript/5. Strict mode.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "15627aea1ffdedcc",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Typescript/6. Prevent inferred 'any'.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "340b9dcc024a4e45",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Typescript/7. Stric handling of 'nuill' and 'undefined'.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "eb2b71de5f72950d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Typescript/8 primitive types - string, number, and boolean.md",
                 "mode": "source",
                 "source": false
               }
@@ -140,7 +44,7 @@
             }
           }
         ],
-        "currentTab": 10
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -269,15 +173,15 @@
   },
   "active": "60114b8d1c2d577f",
   "lastOpenFiles": [
+    "Typescript/Type guards.md",
+    "Typescript/Intersection Types.md",
+    "Typescript/1. type inference and explicit types.md",
+    "Q&A.md",
     "Typescript/9 Object Types.md",
     "Typescript/8 primitive types - string, number, and boolean.md",
     "Typescript/7. Stric handling of 'nuill' and 'undefined'.md",
     "Typescript/6. Prevent inferred 'any'.md",
     "Typescript/5. Strict mode.md",
-    "Typescript/4. any unknown never.md",
-    "Untitled.md",
-    "Typescript/3. Static Type Checking.md",
-    "Typescript/2. Structural Typing.md",
-    "Typescript/1. type inference and explicit types.md"
+    "Typescript/4. any unknown never.md"
   ]
 }
