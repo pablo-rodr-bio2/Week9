@@ -1,0 +1,8 @@
+.comment_container {
+    border: 2px solid blue;
+    border-radius: 15px;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: 15% auto;
+    text-align: center;
+}
