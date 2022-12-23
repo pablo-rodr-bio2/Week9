@@ -42,12 +42,12 @@ const Comment = () => {
                 comments.map(comment =>
                     <div className='comment_container' id={comment.id}>
                         <div className="comment_votes">
-                            <input id={comment.id} type="button" value="+" onClick={handleVotes} />
+                            <input className='button_vote' id={comment.id} type="button" value="+" onClick={handleVotes} />
                             <div>{comment.votes}</div>
-                            <input id={comment.id} type="button" value="-" onClick={handleVotes}/>
+                            <input className='button_vote' id={comment.id} type="button" value="-" onClick={handleVotes}/>
                         </div>
                         <div className="comment_data">
-                            <div>{comment.author}</div>
+                            <div style={{ fontWeight: 'bold', textTransform: 'uppercase' }}>{comment.author}</div>
                             <div>{comment.comment}</div>
                         </div>
                     </div>

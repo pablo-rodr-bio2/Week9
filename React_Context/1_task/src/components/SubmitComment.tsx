@@ -20,14 +20,14 @@ const SubmitComment = (props: Props) => {
         const votes = 0
 
         const newComment: CommentType = { id, author, comment, votes }
-        
+
         if (comments) setComments([...comments, newComment])
     }
 
     return (
-        <form onSubmit={handleSubmit} >
-            <label> Please submit your comment</label>
-            <input type="text" name="submit_text" id="submit_text" onChange={(e) => setText(e.currentTarget.value)}/>
+        <form className='form_comment' onSubmit={handleSubmit} >
+            <label> Submit your comment</label>
+            <textarea  name="submit_text" id="submit_text" onChange={(e) => setText(e.currentTarget.value)}></textarea>
             <button type="submit">Submit</button>
         </form>
     )

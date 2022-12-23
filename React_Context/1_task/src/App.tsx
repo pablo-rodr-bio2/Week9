@@ -10,6 +10,7 @@ function App() {
     <CommentsProvider>
       <div className='App'>
         <Comment />
+        <br />
         <SubmitComment />
       </div>
       </CommentsProvider>
